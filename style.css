@@ -151,7 +151,7 @@ footer {
   top: 0;
   width: 40%; /* Adjust this based on the size of the wave */
   height: 100%;
-  background: url('wave.svg') no-repeat right top;
+  background: url('wave.png') no-repeat right top;
   background-size: contain; /* Ensure the wave scales properly */
   z-index: 1;
 }
