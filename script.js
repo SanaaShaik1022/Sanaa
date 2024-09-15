@@ -1,4 +1,4 @@
-ocument.querySelectorAll('.faq-item').forEach(item => {
+document.querySelectorAll('.faq-item').forEach(item => {
     item.addEventListener('click', function() {
         const answer = this.nextElementSibling;
         
