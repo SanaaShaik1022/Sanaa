@@ -1,4 +1,4 @@
-document.querySelectorAll('.faq-item').forEach(item => {
+ocument.querySelectorAll('.faq-item').forEach(item => {
     item.addEventListener('click', function() {
         const answer = this.nextElementSibling;
         
@@ -18,3 +18,4 @@ document.querySelectorAll('.faq-item').forEach(item => {
         }
     });
 });
+
