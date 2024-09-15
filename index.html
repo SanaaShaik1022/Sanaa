@@ -87,6 +87,89 @@ ul li {
         font-size: 18px;
         border: none;
     }
+
+    .faq-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 40px;
+            background-color: #f0f0f0;
+            font-family: 'Arial', sans-serif;
+        }
+        .faq-sidebar {
+            width: 30%;
+        }
+        .faq-sidebar h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .faq-sidebar p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #666;
+        }
+        .faq-sidebar a {
+            display: inline-block;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            background-color: #46a8f2;
+            color: #fff;
+            font-size: 18px;
+            border: none;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+        .faq-main {
+            width: 65%;
+        }
+        .faq-item {
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        .faq-item:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .faq-question {
+            font-size: 22px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            color: #333;
+        }
+        .faq-icon {
+            display: inline-block;
+            background-color: #46a8f2;
+            color: #fff;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+        .faq-answer {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #666;
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .faq-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .faq-sidebar, .faq-main {
+                width: 100%;
+            }
+        }
   </style>
   <body>
     <body style="margin: 0; padding: 0; font-family: Arial, sans-serif;">
@@ -160,62 +243,45 @@ ul li {
     
         
     
-        <!-- Section: Why Choose Us -->
-         
+       <!-- Section: Why Choose Us -->
 <div style="padding: 50px 20px; background-color: #f5f7fa; position: relative;">
     <h2 style="font-size: 36px; font-weight: bold; margin-bottom: 60px; color: #15334a; text-align: center;">Our Promise to You</h2>
     
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; justify-content: center; text-align: center;">
-        <!-- Certified Expertise -->
-        <div style="padding: 30px; background-color: #fff; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); border-radius: 10px; transition: transform 0.3s;">
-            <img src="certified.png" alt="Certified Expertise Icon" style="width: 80px;">
-            <h3 style="font-size: 24px; font-weight: bold; margin-top: 20px; color: #15334a;">Certified Expertise</h3>
-            <p style="font-size: 16px; color: #666;">We bring certified industry experience to every project.</p>
+        <!-- High Quality -->
+        <div style="padding: 30px; background-color: #fff; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); border-radius: 10px; transition: transform 0.3s; display: flex; flex-direction: column; align-items: center;">
+            <img src="highquality.png" alt="High Quality Icon" style="width: 100px; margin-bottom: 20px;">
+            <h3 style="font-size: 24px; font-weight: bold; color: #15334a;">High Quality</h3>
+            <p style="font-size: 16px; color: #666; max-width: 90%;">All work is produced to high quality standards using the latest technologies.</p>
         </div>
 
-        <!-- Timely Service -->
-        <div style="padding: 30px; background-color: #fff; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); border-radius: 10px; transition: transform 0.3s;">
-            <img src="clock.png" alt="Timely Service Icon" style="width: 80px;">
-            <h3 style="font-size: 24px; font-weight: bold; margin-top: 20px; color: #15334a;">Timely Service</h3>
-            <p style="font-size: 16px; color: #666;">Always meeting project deadlines without compromising quality.</p>
+        <!-- Creativity and Innovation -->
+        <div style="padding: 30px; background-color: #fff; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); border-radius: 10px; transition: transform 0.3s; display: flex; flex-direction: column; align-items: center;">
+            <img src="creative.png" alt="Creativity and Innovation Icon" style="width: 100px; margin-bottom: 20px;">
+            <h3 style="font-size: 24px; font-weight: bold; color: #15334a;">Creativity and Innovation</h3>
+            <p style="font-size: 16px; color: #666; max-width: 90%;">The center is distinguished by a creative team capable of providing new and innovative ideas.</p>
         </div>
 
-        <!-- Reliable Support -->
-        <div style="padding: 30px; background-color: #fff; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); border-radius: 10px; transition: transform 0.3s;">
-            <img src="handshake.png" alt="Reliable Support Icon" style="width: 100px;">
-            <h3 style="font-size: 24px; font-weight: bold; margin-top: 20px; color: #15334a;">Reliable Support</h3>
-            <p style="font-size: 16px; color: #666;">We are committed to providing ongoing support and satisfaction.</p>
+        <!-- Competitive Prices -->
+        <div style="padding: 30px; background-color: #fff; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); border-radius: 10px; transition: transform 0.3s; display: flex; flex-direction: column; align-items: center;">
+            <img src="price.png" alt="Competitive Prices Icon" style="width: 100px; margin-bottom: 20px;">
+            <h3 style="font-size: 24px; font-weight: bold; color: #15334a;">Competitive Prices</h3>
+            <p style="font-size: 16px; color: #666; max-width: 90%;">The center offers competitive prices compared to market prices.</p>
         </div>
 
-        <!-- Innovative Solutions -->
-        <div style="padding: 30px; background-color: #fff; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); border-radius: 10px; transition: transform 0.3s;">
-            <img src="bulb.png" alt="Innovative Solutions Icon" style="width: 100px;">
-            <h3 style="font-size: 24px; font-weight: bold; margin-top: 20px; color: #15334a;">Innovative Solutions</h3>
-            <p style="font-size: 16px; color: #666;">We offer cutting-edge solutions to address your unique challenges.</p>
-        </div>
-
-        <!-- Customer-Centric Approach -->
-        <div style="padding: 30px; background-color: #fff; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); border-radius: 10px; transition: transform 0.3s;">
-            <img src="person.png" alt="Customer-Centric Approach Icon" style="width: 100px;">
-            <h3 style="font-size: 24px; font-weight: bold; margin-top: 20px; color: #15334a;">Customer-Centric Approach</h3>
-            <p style="font-size: 16px; color: #666;">Our focus is on delivering tailored solutions to meet your specific needs.</p>
+        <!-- Excellent Customer Service -->
+        <div style="padding: 30px; background-color: #fff; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); border-radius: 10px; transition: transform 0.3s; display: flex; flex-direction: column; align-items: center;">
+            <img src="customer.png" alt="Excellent Customer Service Icon" style="width: 100px; margin-bottom: 20px;">
+            <h3 style="font-size: 24px; font-weight: bold; color: #15334a;">Excellent Customer Service</h3>
+            <p style="font-size: 16px; color: #666; max-width: 90%;">The center is committed to providing excellent customer service and meeting customer needs.</p>
         </div>
     </div>
 </div>
 
-    <!--Services1-->
-      
-      <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Select the appropriate category</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<!--Packages-->
+<div class="category-wrapper">
     <div class="category-section">
-        <h2>Select the Appropriate Category</h2>
+        <h2 style="color: #15334a;"><b>Select the Appropriate Category</b></h2>
         <div class="categories">
             <div class="category-item">
                 <a href="category1.html">
@@ -250,27 +316,89 @@ ul li {
             <div class="category-item">
                 <a href="category6.html">
                 <img src="category7.jpg" alt="Category 6">
-                <h3><b>Training & workshops</b></h3>
+                <h3><b>Training & Workshops</b></h3>
             </a>
             </div>
         </div>
     </div>
+  </div>
+  
+<!--BRAND NEW SECTION-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beneficiaries of the Center's Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="beneficiaries">
+        <div class="container">
+            <div class="content">
+                <h2 style="color: #15334a;"><b>Beneficiaries of the Center's Services</b></h2>
+                <p>We support over <strong>150 clients</strong>, offering expert consulting and creative solutions to government entities, private companies, and individuals.</p>
+                <div class="grid">
+                    <div class="grid-item">
+                        <h3><b>Government Entities</b></h3>
+                        <ul>
+                            <p>The center creates marketing content, designs visual identities and videos, and manages social media accounts for government entities.</p>
+                        </ul>
+                    </div>
+                    <div class="grid-item">
+                        <h3><b>Private Companies</b></h3>
+                        <ul>
+                            <p>The center provides 3 key services: marketing, visual identity design, and promotional films, while also collaborating with advertising agencies.</p>
+                        </ul>
+                    </div>
+                    <div class="grid-item">
+                        <h3><b>Educational Institutions</b></h3>
+                        <ul>
+                            <p>The center produces documentaries and educational content for universities and colleges, and creates awareness films and multimedia materials for schools.</p>
+                        </ul>
+                    </div>
+                    <div class="grid-item">
+                        <h3><b>Associations and NGOs</b></h3>
+                        <ul>
+                            <li><strong>Emirati Associations:</strong> 20+ project documentaries, social media.</li>
+                            <li><strong>Environmental Orgs:</strong> 10+ awareness materials.</li>
+                        </ul>
+                    </div>
+                    <div class="grid-item">
+                        <h3 style="text-align: center;"><b>Individuals and Creators</b></h3>
+                        <ul>
+                            <p>The center produces documentaries and manages social media for Emirati associations and creates environmental awareness materials for environmental organizations.</p>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="chair 2.jpg" alt="Chair">
+            </div>
+        </div>
+    </section>
 </body>
 </html>
 
+
+
+
+
+
     <!--Support services-->
     <br>
+    <div>
     <h2 style="text-align: center;color: #15334a;"><b>SUPPORT SERVICES</b></h2>
     <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; padding: 20px; max-width: 1200px; margin: 0 auto;">
       
       <div style="background-color: #f9f9f9; padding: 20px; border-radius: 10px; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease; display: flex; flex-direction: column; justify-content: space-between;">
           <div>
               <div style="margin-bottom: 15px;">
-                  <img src="service1.png" alt="Executive Support Icon" style="width: 50px; height: auto;">
+                  <img src="service1.png" alt="" style="width: 50px; height: auto;">
               </div>
-              <h3 style="font-size: 18px; color: #15334a; margin-bottom: 10px;"><B>EXECUTIVE TEAM & ADMIN SUPPORT</B></h3>
-              <p style="font-size: 14px; color:#15334a; margin-bottom: 15px;">Leverage with our Admin support, which will help to focus on your higher value task.</p>
-              <p style="font-size: 14px; color: #15334a; margin-bottom: 20px;">Starting from <strong>AED 135/ hour</strong></p>
+              <h3 style="font-size: 18px; color: #15334a; margin-bottom: 10px;"><B>Specialized Consulting</B></h3>
+              <p style="font-size: 14px; color:#15334a; margin-bottom: 15px;">The center offers expert consulting to help creators turn ideas into successful projects.</p>
+              
           </div>
           <a href="roform.html" style="background-color: #46a8f2; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; text-align: center; transition: background-color 0.3s ease;">Enquire Now</a>
       </div>
@@ -280,9 +408,10 @@ ul li {
               <div style="margin-bottom: 15px;">
                   <img src="service2.png" alt="IT Support Icon" style="width: 50px; height: auto;">
               </div>
-              <h3 style="font-size: 18px; color: #15334a; margin-bottom: 10px;"><B>PROFESSIONAL IT SUPPORT SERVICES</B></h3>
-              <p style="font-size: 14px; color: #15334a; margin-bottom: 15px;">Our onsite professional IT team will assist on all your technical needs.</p>
-              <p style="font-size: 14px; color: #15334a; margin-bottom: 20px;">Starting from <strong>AED 189/ hour</strong></p>
+              <h3 style="font-size: 18px; color: #15334a; margin-bottom: 10px;"><B>Social Media Influencers</B></h3>
+              <p style="font-size: 14px; color: #15334a; margin-bottom: 15px;">The center can help them produce engaging content and increase their followers.</p>
+           
+              
           </div>
           <a href="roform.html" style="background-color: #46a8f2; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; text-align: center; transition: background-color 0.3s ease;">Enquire Now</a>
       </div>
@@ -292,9 +421,9 @@ ul li {
               <div style="margin-bottom: 15px;">
                   <img src="service3.png" alt="PRO Support Icon" style="width: 50px; height: auto;">
               </div>
-              <h3 style="font-size: 18px; color: #15334a; margin-bottom: 10px;"><B>PRO SUPPORT SERVICES</B></h3>
-              <p style="font-size: 14px; color: #15334a; margin-bottom: 15px;">A dedicated PRO team available to assist with your business setup and visa processes.</p>
-              <p style="font-size: 14px; color: #15334a; margin-bottom: 20px;">Starting from <strong>AED 2,500</strong></p>
+              <h3 style="font-size: 18px; color: #15334a; margin-bottom: 10px;"><B>Students and Graduates</B></h3>
+              <p style="font-size: 14px; color: #15334a; margin-bottom: 15px;">The center can produce environmental awareness materials.</p>
+        
           </div>
           <a href="roform.html" style="background-color: #46a8f2; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; text-align: center; transition: background-color 0.3s ease;">Enquire Now</a>
       </div>
@@ -304,13 +433,14 @@ ul li {
               <div style="margin-bottom: 15px;">
                   <img src="service4.png" alt="Event Management Icon" style="width: 50px; height: auto;">
               </div>
-              <h3 style="font-size: 18px; color: #15334a; margin-bottom: 10px;"><B>EVENT MANAGEMENT</B></h3>
+              <h3 style="font-size: 18px; color: #15334a; margin-bottom: 10px;"><B>Environmental Organizations</B></h3>
               <p style="font-size: 14px; color: #15334a; margin-bottom: 15px;">A range of spectacular areas to host your events, workshops with full catering service.</p>
-              <p style="font-size: 14px; color: #15334a; margin-bottom: 20px;">Starting from <strong>AED 2,500</strong></p>
+        
           </div>
           <a href="roform.html" style="background-color: #46a8f2; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; text-align: center; transition: background-color 0.3s ease;">Enquire Now</a>
       </div>
     </div>
+</div>
     
      
 
@@ -336,137 +466,137 @@ ul li {
 
 </div>
 
-<!--QS AND ANS-->
-<div style="display: flex; justify-content: space-between; padding: 40px; background-color: #f0f0f0; font-family: 'Arial', sans-serif;">
-    <div style="width: 30%;">
-      <h2 style="font-size: 36px; margin-bottom: 20px; color: #333;">FAQS</h2>
-      <p style="font-size: 18px; margin-bottom: 20px; color: #666;">Have questions? Our team is here to help.</p>
-      <a href="ro.html" class="btn btn-primary btn-lg mt-3" style="border-radius: 5px; transition: background-color 0.3s ease; background-color: #46a8f2; color: #fff; font-size: 18px; border: none; padding: 10px 20px;">Get in touch</a>
-    </div>
-  
-    <div style="width: 65%;">
-      <div style="background-color: #fff; border-radius: 15px; padding: 20px; margin-bottom: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: box-shadow 0.3s ease;">
-        <div style="font-size: 22px; font-weight: bold; display: flex; justify-content: space-between; align-items: center; cursor: pointer; color: #333;" onclick="toggleFaq(this)">
-          WHY SHOULD I CHOOSE A PROFESSIONAL PHOTO STUDIO OVER A DIY SETUP?
-          <span style="display: inline-block; background-color: #46a8f2; color: #fff; width: 40px; height: 40px; line-height: 40px; text-align: center; font-size: 24px; transition: transform 0.3s ease;">+</span>
-        </div>
-        <div style="margin-top: 10px; font-size: 16px; color: #666; display: none;">
-          Elevate your visuals at Suhail! Our studios provide the perfect canvas—expertly lit, fully equipped, and ready to turn your vision into a masterpiece.
-        </div>
-      </div>
-  
-      <div style="background-color: #fff; border-radius: 15px; padding: 20px; margin-bottom: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: box-shadow 0.3s ease;">
-        <div style="font-size: 22px; font-weight: bold; display: flex; justify-content: space-between; align-items: center; cursor: pointer; color: #333;" onclick="toggleFaq(this)">
-          WHAT ARE THE KEY COST CONSIDERATIONS WHEN HIRING A PODCAST STUDIO?
-          <span style="display: inline-block; background-color: #46a8f2; color: #fff; width: 40px; height: 40px; line-height: 40px; text-align: center; font-size: 24px; transition: transform 0.3s ease;">+</span>
-        </div>
-        <div style="margin-top: 10px; font-size: 16px; color: #666; display: none;">
-          At Suhail, we believe in clear, upfront pricing. Pay for exactly what you need—whether it’s just the basics or a fully-loaded experience.
-        </div>
-      </div>
-  
-      <div style="background-color: #fff; border-radius: 15px; padding: 20px; margin-bottom: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: box-shadow 0.3s ease;">
-        <div style="font-size: 22px; font-weight: bold; display: flex; justify-content: space-between; align-items: center; cursor: pointer; color: #333;" onclick="toggleFaq(this)">
-          HOW CAN A RECORDING STUDIO ELEVATE THE QUALITY OF MY PROJECT?
-          <span style="display: inline-block; background-color: #46a8f2; color: #fff; width: 40px; height: 40px; line-height: 40px; text-align: center; font-size: 24px; transition: transform 0.3s ease;">+</span>
-        </div>
-        <div style="margin-top: 10px; font-size: 16px; color: #666; display: none;">
-          Your sound deserves the spotlight. Suhail’s studios deliver impeccable acoustics and cutting-edge tech to make your project truly shine.
-        </div>
-      </div>
-  
-      <div style="background-color: #fff; border-radius: 15px; padding: 20px; margin-bottom: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: box-shadow 0.3s ease;">
-        <div style="font-size: 22px; font-weight: bold; display: flex; justify-content: space-between; align-items: center; cursor: pointer; color: #333;" onclick="toggleFaq(this)">
-          HOW CAN I ENSURE A SMOOTH BOOKING EXPERIENCE FOR A RECORDING OR PHOTOGRAPHY STUDIO?
-          <span style="display: inline-block; background-color: #46a8f2; color: #fff; width: 40px; height: 40px; line-height: 40px; text-align: center; font-size: 24px; transition: transform 0.3s ease;">+</span>
-        </div>
-        <div style="margin-top: 10px; font-size: 16px; color: #666; display: none;">
-          Booking with Suhail is a breeze! Just a few clicks, and your creative space is secured. We handle the rest, so you can focus on creating. You can reserve your studio time through our dedicated booking platform at <a href="https://booking.cloudspaces.ae/" style="color: #17d8bd; text-decoration: none; font-weight: bold;">https://booking.cloudspaces.ae/</a>.<br><br>
-          Alternatively, you can complete the enquiry form on our website at <a href="https://www.cloudspaces.ae/contact" style="color: #17d8bd; text-decoration: none; font-weight: bold;">https://www.cloudspaces.ae/contact</a>.<br><br>
-          If you prefer a more direct approach, feel free to call one of our four locations. We aim to make the booking process as seamless as possible to accommodate your creative schedule.
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <script>
-  function toggleFaq(element) {
-    const answerDiv = element.nextElementSibling;
-    const icon = element.querySelector('span');
+
+    <!--QS AND ANS-->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FAQ Section with Toggle</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="faq-section">
+            <div class="faq-left">
+                <h2>FAQs</h2>
+                <p>Our team is ready to answer your questions.</p>
+                <button class="get-in-touch">Get in touch</button>
+            </div>
+            <div class="faq-right">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What makes renting a photo studio the perfect choice?</h3>
+                    </div>
+                    <div class="faq-toggle">+</div>
+                </div>
+                <div class="faq-answer">
+                    <p>Renting a photo studio with Sohail Smart Solutions offers premium equipment and flexible setups for high-quality production. Our professional environment ensures your creative projects are seamless and successful.</p>
+                </div>
     
-    if (answerDiv.style.display === "none" || answerDiv.style.display === "") {
-      answerDiv.style.display = "block";
-      icon.textContent = "✕";
-    } else {
-      answerDiv.style.display = "none";
-      icon.textContent = "+";
-    }
-  }
-  </script>
-  
-  
-  
- 
-  
-       
-  
-  
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What’s the cost of creating your podcast in a professional studio?</h3>
+                    </div>
+                    <div class="faq-toggle">+</div>
+                </div>
+                <div class="faq-answer">
+                    <p>The cost of creating your podcast in a professional studio is usually around 200 AED per hour or 1,200 AED per day. This often includes access to top-notch equipment and a soundproof space.Discounts or additional services may be available for longer bookings.</p>
+                </div>
+    
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is it worth going to a recording studio?</h3>
+                    </div>
+                    <div class="faq-toggle">+</div>
+                </div>
+                <div class="faq-answer">
+                    <p>Using a recording studio provides access to professional equipment and acoustic treatment, which significantly enhances audio quality. It also offers a controlled environment and expert support, ensuring a polished and high-quality final product.</p>
+                </div>
+    
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What’s the best way to reserve a recording and photography studio?</h3>
+                    </div>
+                    <div class="faq-toggle">+</div>
+                </div>
+                <div class="faq-answer">
+                    <p>You can book a studio rental through our website or contact us directly via email or phone.</p>
+                </div>
+            </div>
+        </div>
+    
+        <script src="script.js"></script>
+    </body>
+    </html>
+    
 <!--footer-->
 <footer>
+    <div class="footer-wave"></div>
     <!-- Top Section with Links -->
     <div class="footer-top">
+        <!--Location Section-->
+        <div class="footer-column">
+            <h3>Location</h3>
+            <ul>
+              <li><a href="#" style="color: #15334a;"><b>DUBAI</b></a></li>
+              <li><a href="https://www.google.com/maps/dir//Muhaisnah+-+Muhaisanah+2+-+Dubai/@25.2563033,55.3299074,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3e5f5e72f41140e5:0x1e52a3d5bd61e7bc!2m2!1d55.4123089!2d25.2563262?entry=ttu&g_ep=EgoyMDI0MDkwOS4wIKXMDSoASAFQAw%3D%3D">Al Muhaisnah</a></li>
+            </ul>
+          </div>
       <!-- Pages Section -->
-       <div class="footer-column">
-        <h3>Locations</h3>
-        <ul>
-          <li>DUBAI</a></li>
-          <li><a href="#">Al Muhaisnah</a></li>
-        </ul>
-      </div>
-      
       <div class="footer-column">
         <h3>Pages</h3>
         <ul>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Consultancies</a></li>
-          <li><a href="#">Smart Solutions</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Education News</a></li>
-          <li><a href="#">Be Part of the Sohail Family</a></li>
+          <li><a href="https://suhail.ae/About-Us">About Us</a></li>
+          <li><a href="https://suhail.ae/Consultancies">Consultancies</a></li>
+          <li><a href="https://suhail.ae/Smart-Solutions">Smart Solutions</a></li>
+          <li><a href="https://suhail.ae/Our-Blog">Blog</a></li>
+          <li><a href="https://suhail.ae/Education-News">Education News</a></li>
+          <li><a href="roform.html">Be Part of the Sohail Family</a></li>
         </ul>
       </div>
-  
-      <!-- Training Section -->
+      <!--Amenities Section-->
       <div class="footer-column">
         <h3>Amenities</h3>
         <ul>
-          <li><a href="#">Meeting Room</a></li>
-          <li><a href="#">Creative Studios</a></li>
-          <li><a href="#">Event Spaces</a></li>
+          <li>Podcast Center</li>
+          <li>Multi-Purpose Photography Studio</li>
+          <li>Technical Production Unit</li>
+          <li>Guest Preparation Room (Makeup)</li>
+          <li>Reception Room</li>
+
         </ul>
       </div>
+
   
       <!-- Social Section -->
       <div class="footer-column">
         <h3>Social</h3>
         <div class="social-icons">
-          <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
-          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
-          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
-          <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+        <p>
+          <a href="https://www.facebook.com/p/Sohail-Smart-Solutions-100083300861177/" class="social-icon"><i class="fab fa-facebook"></i></a>
+          <br>
+          <a href="https://www.instagram.com/sohail_smart_solutions?igshid=aGxlYTdxOWszeDlu" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <br>
+          <a href="https://www.linkedin.com/company/sohail-smart-solution/posts/?feedView=all" class="social-icon"><i class="fab fa-linkedin"></i></a>
+          <br>
+          <a href="https://x.com/SohailSolutions" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <br>
+          <a href="https://www.youtube.com/@SohailSmartSolution" class="social-icon"><i class="fab fa-youtube"></i></a>
+          <br>
+          <a href="https://www.tiktok.com/@sohailsmartsolutionsuae?_t=8lY7rzzsXgL&_r=1" class="social-icon"><i class="fab fa-tiktok"></i></a>
+        </p>
         </div>
       </div>
     </div>
   
-    <!-- Bottom Section with Copyright -->
+    <!-- Bottom Section with Motto and Copyright -->
     <div class="footer-bottom">
-      <p>Sohail Smart Solutions © 2024 All Rights Reserved. - <a href="#">Privacy Policy</a></p>
+      <p class="footer-motto">Uniting Arab Voices, Igniting Creative Futures</p>
+      <p>Sohail Smart Solutions © 2024 All Rights Reserved. - <a href="https://suhail.ae/Privacy-Policy">Privacy Policy</a></p>
     </div>
-  </footer>
-  
-  
+</footer>
+
     
     </body>
     </html>
